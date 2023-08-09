@@ -1,0 +1,47 @@
+@use "mixins" as mix;
+
+$color-primary: #F4C242;
+$color-secondary: #10224F;
+
+i {
+   @include mix.styleIcons(4rem,$color-secondary)
+}
+
+.nav-item {
+   color: $color-secondary;
+   font-weight: 600;
+   cursor: pointer;
+   text-decoration: none;
+   border: none;
+   font-size: 24px;
+   
+   &:focus, &:hover {
+      border-bottom: 2px solid $color-secondary;
+   }
+
+}
+
+.item_stack {
+   display: flex;
+   gap: 1rem;
+
+   i { @include mix.styleIcons(2rem,$color-primary); }
+}
+
+.edu-item {
+
+   color: $color-secondary;
+   font-family: Roboto Mono;
+   font-style: normal;
+   line-height: normal;
+   
+   h4 {
+      font-size: 26px;
+      font-weight: 500;
+   }
+
+   p {
+      font-size: 20px;
+      font-weight: 400;
+   }
+}

@@ -1,0 +1,22 @@
+
+@mixin styleHeader($color,$font-size) {
+    color: $color;
+    text-align: center;
+    font-size: $font-size;
+    font-style: normal;
+    font-weight: 600;
+}
+
+@mixin styleBody($img_src){
+    font-family: 'Readex Pro',sans-serif;
+    margin:0;
+    padding:0;
+    background-repeat: no-repeat;
+    background-image: url($img_src);
+    background-size: cover;
+}
+
+@mixin styleIcons($size,$color){
+    font-size: $size;
+    color:$color;
+}

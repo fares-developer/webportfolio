@@ -1,10 +1,181 @@
-body {
-  width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Readex+Pro:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,400;0,500;0,600;1,300;1,500&display=swap");
+i {
+  font-size: 4rem;
+  color: #10224F;
+}
+
+.nav-item {
+  color: #10224F;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  font-size: 24px;
+}
+.nav-item:focus, .nav-item:hover {
+  border-bottom: 2px solid #10224F;
+}
+
+.item_stack {
+  display: flex;
+  gap: 1rem;
+}
+.item_stack i {
+  font-size: 2rem;
+  color: #F4C242;
+}
+
+.edu-item {
+  color: #10224F;
+  font-family: Roboto Mono;
+  font-style: normal;
+  line-height: normal;
+}
+.edu-item h4 {
+  font-size: 26px;
+  font-weight: 500;
+}
+.edu-item p {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+body.index {
+  font-family: "Readex Pro", sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url(../assets/screen_main.png);
   background-repeat: no-repeat;
+  background-image: url("../assets/screen_main.png");
   background-size: cover;
+}
+
+.profile {
+  width: 30%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem 0 1rem 0;
+  gap: 1rem;
+}
+.profile h2 {
+  color: #F4C242;
+}
+.profile img {
+  align-self: center;
+}
+.profile .social_media {
+  width: 100%;
+  margin-top: 10.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.content {
+  font-family: "Roboto Mono", monospace;
+  width: 70%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 1rem;
+}
+.content .nav_bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  overflow: auto;
+}
+.content .presentation {
+  color: #10224F;
+  text-align: center;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.content article {
+  margin-top: 6rem;
+  width: 100%;
+}
+.content article header {
+  color: white;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+}
+.content article p {
+  text-align: justify;
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0rem 6rem;
+}
+
+body.stack {
+  font-family: "Readex Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-repeat: no-repeat;
+  background-image: url("../assets/screen.png");
+  background-size: cover;
+}
+
+.stack-items {
+  font-family: "Roboto Mono", monospace;
+  width: 30%;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 3rem;
+}
+.stack-items header {
+  color: #F4C242;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.education {
+  font-family: "Roboto Mono", monospace;
+  width: 70%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 3rem;
+}
+.education .edu-items {
+  display: inherit;
+  flex-direction: inherit;
+  padding-left: 4rem;
+  align-items: start;
+  gap: 1rem;
+}
+.education header {
+  color: #10224F;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=style.css.map */
