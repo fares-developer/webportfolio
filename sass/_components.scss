@@ -1,40 +1,97 @@
 @use "mixins" as mix;
-
-$color-primary: #F4C242;
-$color-secondary: #10224F;
+$color-primary: #f5f8ff;
+$color-secondary: #25262a;
+$color-4: #ffd60a;
 
 i {
-   @include mix.styleIcons(4rem,$color-secondary)
+   @include mix.styleIcons(3rem, $color-primary);
 }
 
-.nav-item {
-   color: $color-secondary;
-   font-weight: 600;
+.navitem {
+   color: $color-primary;
+   font-weight: 300;
    cursor: pointer;
    text-decoration: none;
    border: none;
-   font-size: 24px;
-   
-   &:focus, &:hover {
-      border-bottom: 2px solid $color-secondary;
-   }
+   font-size: 20px;
 
+   &:hover {
+      padding-bottom: 0.3rem;
+      border-bottom: 2px solid $color-primary;
+   }
 }
 
 .item_stack {
    display: flex;
+   flex-direction: column;
+   width: 20%;
+   height: 200px;
+   flex-grow: 1;
+   object-fit: cover;
+   text-align: justify;
    gap: 1rem;
+   justify-content: center;
+   align-items: center;
+   font-size: 2rem;
+   background-color: $color-primary;
+   color: $color-secondary;
+   border: 2px solid $color-secondary;
+   border-radius: 20px;
+   padding: 2rem;
+   transition:
+      ease-out width 0.4s,
+      ease-out height 0.4s;
 
-   i { @include mix.styleIcons(2rem,$color-primary); }
+   @keyframes aparecer {
+      from {
+         opacity: 0;
+         visibility: hidden;
+      }
+      to {
+         opacity: 1;
+         visibility: visible;
+      }
+   }
+
+   i {
+      @include mix.styleIcons(2em, inherit);
+   }
+
+   h6 {
+      font-size: 2rem;
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      animation: aparecer 2s forwards;
+   }
+
+   p {
+      font-size: 16px;
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+      animation: aparecer 3s forwards;
+   }
+
+   &:hover {
+      width: 70%;
+      height: 300px;
+      margin: 0;
+
+      p,
+      h6 {
+         display: inherit;
+         visibility: visible;
+      }
+   }
 }
 
 .edu-item {
-
-   color: $color-secondary;
+   color: $color-primary;
    font-family: Roboto Mono;
    font-style: normal;
    line-height: normal;
-   
+
    h4 {
       font-size: 26px;
       font-weight: 500;
